@@ -1,0 +1,15 @@
+.linia {
+	transition: all 1s ease-in-out;
+	transition-delay: 1s;
+	width: 100%;
+	box-shadow: 0 0 10px #01b0db, 0 0 20px #01b0db, 0 0 30px #01b0db, 0 0 40px #01b0db;
+}
+
+.cub {
+	transition: all 1s ease-in-out;
+	background: #00ccff;
+	box-shadow: 0 0 10px #01b0db, 0 0 20px #01b0db, 0 0 30px #01b0db, 0 0 40px #01b0db;
+}
+.activizin {
+	background-color: bisque;
+}

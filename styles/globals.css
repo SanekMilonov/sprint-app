@@ -1,0 +1,319 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+:root {
+	--black: #000000;
+	--gray-light: #EBEBEB;
+	--white: #fff;
+	--primary: #7653FC;
+	--primary-hover: #0cf;
+	--color-text: #0cf;
+	--red: #FC836D;
+	--green: #1DC37E;
+	--green-light: #C8F8E4;
+	--blue: #3f9df4;
+	--azure: #0082FA;
+	--textcolor:#999;
+	--prof-green:linear-gradient(-80deg, rgba(121, 221, 9, 0.1), transparent 50%);
+	--prof-blue: linear-gradient(-80deg, rgba(0, 118, 189, 0.1), transparent 50%);
+	--profred: linear-gradient(-80deg, rgb(255 0 0 / 10%), transparent 50%);
+	--prof-yellow: linear-gradient(-80deg, rgba(189, 187, 73, 0.1), transparent 50%);
+	--text-shodow-color:0 0 10px #01b0db,
+		0 0 20px #01b0db,
+		0 0 30px #01b0db,
+		0 0 40px #01b0db;
+	--text-shodow-white:0 0 10px #fff,
+				0 0 20px #fff,
+				0 0 30px #fff,
+				0 0 40px #fff;
+}
+
+
+body{
+	background-color: var(--black)  !important;
+	color: var(--textcolor) !important;
+}
+.bg0 {
+	background-color: #161616;
+	background-size: cover;
+}
+
+.bg1 {
+	background: url('../public/bg-1.jpg') center bottom no-repeat;
+	background-size: cover;
+	margin: 0px;
+	width: 100%;
+}
+
+.bg2 {
+	background: url('../public/bg-2.jpg') center bottom no-repeat;
+	background-size: cover;
+	min-height: auto;
+}
+
+.bg3 {
+	background: url('../public/bg-3.jpg') center bottom no-repeat;
+	background-size: cover;
+}
+.bg4 {
+	background: url('../public/bg-4.jpg') center bottom no-repeat;
+	background-size: cover;
+}
+
+
+/*404*/
+.bgerr {
+	background: url('../public/eror.jpg') center bottom no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+}
+.btnfos-5 i:before {
+	padding-right: 10px;
+}
+.btnfos-5 {
+	border: 0 solid;
+	box-shadow: inset 0 0 20px rgb(255 255 255);
+	outline: 1px solid;
+	outline-color: rgba(255, 255, 255, 0);
+	outline-offset: 0px;
+	text-shadow: none;
+	-webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+	transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+	outline-color: rgb(255 255 255);
+	outline-offset: 0px;
+	text-decoration: none;
+	color: #fff !important;
+		text-align: center;
+		font-size: 2em;
+}
+.btnfos-5:hover {
+	border: 1px solid;
+	box-shadow: inset 0 0 20px rgb(0 204 255), 0 0 20px rgb(0 204 255);
+	outline-offset: 15px;
+	outline-color: rgba(255, 255, 255, 0);
+	text-shadow: 1px 1px 2px #00ccff;
+	color: #fff;
+	text-decoration: none;
+}
+.bgerr .container{
+	width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+}
+h1.err {
+	font-size: 10em;
+	color: #fff;
+}
+
+.err {
+	animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch {
+
+	2%,
+	64% {
+		transform: translate(2px, 0) skew(0deg);
+	}
+
+	4%,
+	60% {
+		transform: translate(-2px, 0) skew(0deg);
+	}
+
+	62% {
+		transform: translate(0, 0) skew(5deg);
+	}
+}
+
+.err:before,
+.err:after {
+	content: attr(title);
+	position: absolute;
+	left: 0;
+}
+
+.err:before {
+	animation: glitchTop 1s linear infinite;
+	clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop {
+
+	2%,
+	64% {
+		transform: translate(2px, -2px);
+	}
+
+	4%,
+	60% {
+		transform: translate(-2px, 2px);
+	}
+
+	62% {
+		transform: translate(13px, -1px) skew(-13deg);
+	}
+}
+
+.err:after {
+	animation: glitchBotom 1.5s linear infinite;
+	clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+	-webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom {
+
+	2%,
+	64% {
+		transform: translate(-2px, 0);
+	}
+
+	4%,
+	60% {
+		transform: translate(-2px, 0);
+	}
+
+	62% {
+		transform: translate(-22px, 5px) skew(21deg);
+	}
+}
+
+a.btnfos.btnfos-5 {
+	display: block;
+	margin: auto;
+	padding: 8px;
+}
+
+/*end 404*/
+
+.my_row{
+	align-items: center;
+	justify-content: center;
+	padding: 80px 0px;
+	height: 100vh;
+}
+.col_right img{
+	margin: auto;
+	display: block;
+	margin-right: 10px;
+}
+.red::before {
+	background-image: linear-gradient(-80deg, rgb(255 0 0 / 50%), transparent 50%) !important;
+}
+
+.yellow::before {
+	background-image: linear-gradient(-80deg, rgb(189 187 73 / 50%), transparent 50%) !important;
+}
+
+.blue::before {
+	background-image: linear-gradient(-80deg, rgb(0 118 189 / 50%), transparent 50%) !important;
+}
+
+.greens::before {
+	background-image: linear-gradient(-80deg, rgb(121 221 9 / 50%), transparent 50%) !important;
+}
+
+.title_greens:hover  {
+	color: #79dd09 !important;
+	text-shadow: 0 0 10px #79dd09, 0 0 20px #79dd09, 0 0 30px #79dd09, 0 0 40px #79dd09;
+	z-index: 100;
+}
+
+.title_red:hover  {
+	color: #ff0e00 !important;
+	text-shadow: 0 0 10px #bd150b, 0 0 20px #bd150b, 0 0 30px #bd150b, 0 0 40px #bd150b;
+	z-index: 100;
+}
+
+.title_blue:hover  {
+	color: #02a0ff !important;
+	text-shadow: 0 0 10px #0076bd, 0 0 20px #0076bd, 0 0 30px #0076bd, 0 0 40px #0076bd;
+	z-index: 100;
+}
+
+.title_yellow:hover  {
+	color: #fffb00 !important;
+	text-shadow: 0 0 10px #bdbb49, 0 0 20px #bdbb49, 0 0 30px #bdbb49, 0 0 40px #bdbb49;
+	z-index: 100;
+}
+
+.postcard_bar_yellow {
+	background-color: #bdbb49;
+}
+
+.postcard_bar_blue {
+	background-color: #0076bd;
+}
+
+.postcard_bar_greens {
+	background-color: #79dd09;
+}
+
+.postcard_bar_red {
+	background-color: #bd150b;
+}
+.div50{
+	width: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+	.carousel-inner {
+			min-height: 450px;
+		}
+	.red::before {
+			background-image: linear-gradient(360deg, rgb(255 0 0 / 50%), transparent 50%) !important;
+		}
+	
+		.yellow::before {
+			background-image: linear-gradient(360deg, rgb(189 187 73 / 50%), transparent 50%) !important;
+		}
+	
+		.blue::before {
+			background-image: linear-gradient(360deg, rgb(0 118 189 / 50%), transparent 50%) !important;
+		}
+	
+		.greens::before {
+			background-image: linear-gradient(360deg, rgb(121 221 9 / 50%), transparent 50%) !important;
+		}
+}

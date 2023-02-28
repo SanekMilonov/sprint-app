@@ -1,0 +1,54 @@
+.widget_title {
+	h3 {
+		font-size: 3rem;
+		display: flex;
+		width: 80%;
+		justify-content: flex-end;
+		margin: auto;
+	}
+
+	.widget_list {
+		padding: 0px;
+
+		.active {
+			background: rgba(0, 204, 255, 0.2);
+			border: 1px solid #00ccff;
+
+			a {
+				color: #fff !important;
+			}
+		}
+
+		.widget_items {
+			text-decoration: none !important;
+			list-style: none !important;
+			list-style-type: none !important;
+			font-size: 18px;
+			text-align: end;
+			color: #00ccff;
+			border: 1px solid #00ccff47;
+			transition: background 230ms ease-in-out, color 230ms ease-in-out, border 230ms ease-in-out;
+
+			&:hover {
+				background: rgba(0, 204, 255, 0.2);
+				border: 1px solid #00ccff;
+
+				a {
+					color: #fff !important;
+				}
+			}
+
+			.widget_silka {
+				text-decoration: none !important;
+				list-style: none !important;
+				list-style-type: none !important;
+				text-align: end;
+				color: #00ccff;
+				display: block;
+				font-size: 20px;
+				font-weight: 700;
+				padding: 15px;
+			}
+		}
+	}
+}

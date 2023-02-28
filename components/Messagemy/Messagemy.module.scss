@@ -1,0 +1,148 @@
+.messaget {
+	padding: 0px;
+	margin: 0px;
+	display: flex;
+	padding: 30px 0px;
+	width: 80%;
+	margin: auto;
+	align-items: center;
+
+	.prim {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.octagon {
+			width: 140px;
+			height: 60px;
+			position: absolute;
+		}
+
+		.d135,
+		.d45,
+		.d90,
+		.d0 {
+			border: 1px solid #fff;
+			border-top: 0;
+			border-bottom: 0;
+		}
+
+		.d45 {
+			transform: rotate(45deg);
+		}
+
+		.d90 {
+			transform: rotate(90deg);
+		}
+
+		.d135 {
+			transform: rotate(135deg);
+		}
+
+		svg {
+			width: 50px;
+			height: 50px;
+			fill: var(--primary-hover);
+			position: absolute;
+		}
+
+
+	}
+
+	h2 {
+		margin-top: 150px;
+		color: #fff;
+		text-align: center;
+	}
+
+	.from {
+		.forma {
+			background: #ffffff29;
+			width: 70%;
+			padding: 20px;
+			border-radius: 20px;
+			backdrop-filter: blur(2px);
+			margin: auto;
+
+			div {
+				width: 100%;
+			}
+
+			.otxivforms {
+				display: flex;
+				align-content: space-around;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			h3 {
+				color: #02b1dc;
+				text-shadow: 0 0 10px #01b0db, 0 0 20px #01b0db, 0 0 30px #01b0db, 0 0 40px #01b0db;
+				margin-bottom: 15px;
+				margin-top: 15px;
+			}
+
+			select {
+				width: 100%;
+				max-width: 100%;
+				box-shadow: 0 0 4px rgb(0 0 0 / 20%);
+				border-radius: 10px;
+				padding: 14px 15px;
+				font-size: 14px;
+				line-height: 18px;
+				color: rgb(251 251 255 / 80%);
+				cursor: pointer;
+				background: #525151;
+
+				&:focus-visible {
+					border: 1px solid #0cf;
+				}
+			}
+
+			textarea,
+			input {
+				background: #525151;
+				border: 1px solid #afafaf;
+				color: #AFAFAF;
+				height: 3.1875rem;
+				padding: 0 0.9375rem;
+				width: 100%;
+				--webkit-appearance: none;
+				border-radius: 5px;
+
+				&:focus {
+					border: 1px solid #0cf;
+					outline: none;
+				}
+			}
+
+			button {
+				width: 60%;
+				margin: 40px auto;
+				display: block;
+			}
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.messaget {
+		width: 100%;
+
+		.prim {
+			height: 190px;
+		}
+
+		h2 {
+			margin-top: auto;
+		}
+
+		.from {
+			.forma {
+				width: 100%;
+			}
+		}
+	}
+
+
+}

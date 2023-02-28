@@ -1,0 +1,134 @@
+.modal_item {
+	background-color: #292929;
+	overflow: hidden;
+	cursor: pointer;
+	min-height: 480px;
+	position: relative;
+
+	&.activizin {
+
+		.linia {
+			transition: all 1s ease-in-out;
+			transition-delay: 1s;
+			width: 100%;
+			box-shadow: 0 0 10px #01b0db, 0 0 20px #01b0db, 0 0 30px #01b0db, 0 0 40px #01b0db;
+		}
+
+		.cub {
+			transition: all 1s ease-in-out;
+			background: #00ccff;
+			box-shadow: 0 0 10px #01b0db, 0 0 20px #01b0db, 0 0 30px #01b0db, 0 0 40px #01b0db;
+		}
+	}
+
+	a {
+		color: #fff;
+		text-decoration: none;
+
+		.item_top {
+			width: 100%;
+			position: relative;
+			overflow: hidden;
+			max-height: 265px;
+			z-index: 3;
+
+			img {
+				background-size: contain;
+				width: 100%;
+				height: auto;
+			}
+
+			p {
+				display: block;
+				position: absolute;
+				margin: 0px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				background: #0cf;
+				color: #0B0B0B;
+				font-size: .625rem;
+				left: 0;
+				letter-spacing: 2px;
+				padding: 0.3125rem 0.625rem;
+				text-transform: uppercase;
+				max-width: 50%;
+				width: fit-content;
+				text-decoration: none;
+				bottom: 0px;
+				z-index: 99;
+				height: 26px;
+
+				&:after {
+					content: '';
+					display: block;
+					width: 0px;
+					height: 0px;
+					border-left: 19px solid transparent;
+					border-right: 19px solid transparent;
+					border-bottom: 19px solid #0cf;
+					position: absolute;
+					top: 10px;
+					right: -25px;
+					transform: rotate(225deg);
+					z-index: 99;
+				}
+			}
+		}
+
+		.item_bottom {
+			width: 100%;
+			box-sizing: border-box;
+			height: 250px;
+
+			.item_title {
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				-webkit-flex-direction: column;
+				-moz-flex-direction: column;
+				-ms-flex-direction: column;
+				-o-flex-direction: column;
+				flex-direction: column;
+				-ms-align-items: flex-start;
+				align-items: flex-start;
+				margin-top: -15px;
+				padding: 30px 21px;
+				position: relative;
+
+				h3 {
+					margin: 0;
+					padding: 0;
+					font-size: 18px;
+					line-height: 32px;
+					font-weight: 400;
+				}
+			}
+		}
+	}
+
+	.linia {
+		width: 0%;
+		background: #00ccff;
+		height: 2px;
+		display: block;
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+		transition: all 1s ease-in-out;
+	}
+
+	.cub {
+		display: block;
+		transform: rotate(135deg);
+		width: 50px;
+		height: 50px;
+		background: rgb(0 0 0 / 40%);
+		position: absolute;
+		bottom: -25px;
+		right: -25px;
+		transition: all 1s ease-in-out;
+		transition-delay: 1s;
+	}
+}

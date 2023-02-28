@@ -1,0 +1,37 @@
+.carusel_content {
+	width: 100%;
+
+	.item {
+		img {
+			position: inherit !important;
+			object-fit: cover !important;
+			background-size: cover !important;
+			width: auto !important;
+			height: 100% !important;
+			min-height: 100vh;
+			max-width: none !important;
+			width: 100% !important;
+		}
+
+		.caption {
+			top: 50%;
+			bottom: 50%;
+			background: #000000cf;
+			height: fit-content;
+			filter: drop-shadow(2px 4px 6px black);
+
+			h2 {
+				font-weight: 700;
+				color: #01b8e5;
+				opacity: 1;
+				text-shadow: 0 0 10px #01b0db, 0 0 20px #01b0db, 0 0 30px #01b0db, 0 0 40px #01b0db;
+			}
+
+			p {
+				color: white;
+				margin: 30px 0px;
+				text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff;
+			}
+		}
+	}
+}

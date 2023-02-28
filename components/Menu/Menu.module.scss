@@ -1,0 +1,267 @@
+.navbar {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	z-index: 99999999;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding: 0px;
+	height: 72px;
+	vertical-align: inherit;
+	background: rgba(11, 11, 11, 0.1);
+	justify-content: flex-end;
+	position: absolute;
+
+	.container_fluid {
+		height: 100%;
+		padding: 0px;
+	}
+
+	button.navbar_toggler {
+		display: none;
+	}
+
+	div.navbar_collapse {
+		display: flex;
+		justify-content: flex-end !important;
+		float: right;
+		height: 100%;
+		background: black;
+		color: #ffff;
+	}
+
+	ul {
+		padding: 0;
+		list-style: none;
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+
+	ul.navbar_nav {
+		margin-right: 0px;
+		display: flex;
+		flex-direction: row;
+		align-items: stretch;
+		height: 100%;
+
+		.active {
+			a {
+				color: var(--primary-hover);
+
+				&:after {
+					background-color: var(--primary-hover);
+					width: 100%;
+				}
+			}
+		}
+
+		li {
+			align-self: center;
+			height: 100%;
+			position: relative;
+
+			&:hover {
+				a {
+					color: var(--primary-hover);
+
+					&:after {
+						background-color: var(--primary-hover);
+						width: 100%;
+					}
+				}
+
+				a svg {
+					fill: var(--primary-hover);
+				}
+			}
+
+			a {
+				height: 100%;
+				padding: 8px 20px;
+				transition: all 450ms ease-in-out;
+				background: rgba(11, 11, 11, 0.9);
+				color: #fff;
+				text-decoration: none;
+				font-size: 1em;
+				FONT-WEIGHT: 700;
+				display: inline-flex;
+				align-items: center;
+
+				&:after {
+					background: var(--primary-hover);
+					content: '';
+					display: block;
+					height: 0.0625rem;
+					position: absolute;
+					bottom: 0px;
+					left: 50%;
+					width: 0;
+					transform: translate(-50%, 0);
+					transition: all 450ms ease-in-out;
+					box-shadow: 0 0 10px #01b0db, 0 0 20px #01b0db, 0 0 30px #01b0db, 0 0 40px #01b0db;
+				}
+
+				svg {
+					transition: all 450ms ease-in-out;
+					width: 25px;
+					fill: white;
+				}
+			}
+		}
+	}
+}
+
+.menu_menju_container {
+	.menu {
+		.socfoter {
+			width: 100%;
+
+			svg {
+				float: left;
+				width: 20px;
+				margin-right: 12px;
+				fill: #999;
+			}
+		}
+	}
+
+	ul {
+		padding-left: 0px;
+		position: inherit;
+		max-width: 200px;
+
+		li {
+			list-style: none;
+			display: flex;
+
+			a {
+				color: #999;
+				text-decoration: none;
+				transition: all 180ms ease-in-out;
+				display: flex;
+
+				&:hover {
+					color: #0cf;
+					text-shadow: 0 0 10px #01b0db, 0 0 20px #01b0db, 0 0 30px #01b0db, 0 0 40px #01b0db;
+
+					svg {
+						fill: #0cf !important;
+						text-shadow: 0 0 10px #01b0db, 0 0 20px #01b0db, 0 0 30px #01b0db, 0 0 40px #01b0db;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.menu_menju_container {
+		ul {
+			max-width: inherit;
+			width: 100%;
+
+			li {
+				border-bottom: 1px solid;
+
+				a {
+					text-align: center;
+					margin: auto;
+					padding: 5px 0px;
+				}
+			}
+		}
+	}
+
+
+	.navbar {
+		display: block;
+		background: rgba(11, 11, 11, 1);
+		height: auto;
+		position: absolute;
+
+		.container_fluid {
+			height: 100%;
+			padding: 0px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+
+		button.navbar_toggler {
+			display: block;
+			background: #00ffff00;
+			border-radius: 10px;
+			margin-left: 15px;
+		}
+
+		.navbar_collapse {
+			float: none;
+			transition: all 450ms ease-in-out;
+			width: 100%;
+
+			&.diactiv {
+				display: none;
+				height: 0%;
+			}
+
+			&.activ {
+				display: block;
+				height: 100%;
+			}
+		}
+
+		ul {
+			padding: 0;
+			list-style: none;
+			height: 0%;
+			display: block;
+			align-items: center;
+
+
+
+		}
+
+		ul.navbar_nav {
+			margin-right: 0px;
+			display: block;
+			flex-direction: row;
+			align-items: stretch;
+			height: 100%;
+
+			li {
+				align-self: center;
+				height: 100%;
+				position: relative;
+
+				&:hover {
+					a {
+						color: var(--primary-hover);
+
+						&:after {
+							background-color: var(--primary-hover);
+							width: 100%;
+						}
+					}
+
+					a svg {
+						fill: var(--primary-hover);
+					}
+				}
+
+				a {
+					width: 100%;
+					text-align: center;
+					margin: auto;
+					display: block;
+				}
+			}
+
+			.menu_navigator_soc {
+				display: flex;
+				margin: auto;
+				justify-content: center;
+				background: #0a0a0a;
+			}
+		}
+	}
+}

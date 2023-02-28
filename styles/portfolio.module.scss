@@ -1,0 +1,124 @@
+.portfolio_section {
+	padding: 150px 0px;
+
+	.portfolio_page {
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-columns: 80% 20%;
+		grid-template-areas: "items sidbar";
+		grid-gap: 0px;
+		gap: 40px;
+		height: 100%;
+		width: 80%;
+		margin: auto;
+
+		.portfolio_items {
+			grid-area: items;
+		}
+
+		.portfolio_seadbar {
+			grid-area: sidbar;
+		}
+	}
+}
+
+.pagination {
+	border-radius: 40px;
+	border: 2px solid #00ccff;
+	overflow: hidden;
+	width: fit-content;
+	margin: 20px auto;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background: #181818;
+	box-shadow: 0 0 2px #00ccff, 0 0 2px #00ccff, 0 0 2px #00ccff, 0 0 20px #00ccff;
+	padding: 0px;
+
+
+	.active {
+		background-color: #00ccff !important;
+		border: none !important;
+		transform: skewX(344deg);
+
+		span {
+			color: #fff !important;
+			background: transparent !important;
+			border: none;
+		}
+	}
+
+
+	a,
+	span {
+		color: #fff;
+		background-color: transparent;
+		font-size: 22px;
+		font-weight: 600;
+		text-align: center;
+		line-height: 43px;
+		height: 45px;
+		width: 55px;
+		padding: 0;
+		border: none;
+		border-radius: 0;
+		position: relative;
+		z-index: 1;
+		display: flow-root;
+		text-decoration: none;
+
+	}
+
+	a {
+		&:hover {
+			&::after {
+				border-radius: 0;
+				transform: skewX(-16deg) scale(1);
+			}
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			height: 100%;
+			width: 100%;
+			border: 1px solid #000;
+			border-top: none;
+			border-bottom: none;
+			transform: skewX(-16deg);
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: -1;
+			transition: all 0.3s;
+		}
+
+		&:after {
+			background-color: #00ccff;
+			border: none;
+			border-radius: 50%;
+			transform: skewX(-16deg) scale(0);
+		}
+	}
+
+}
+
+@media screen and (max-width: 1200px) {
+	.portfolio_section {
+		padding: 150px 0px;
+
+		.portfolio_page {
+			display: grid;
+			grid-template-rows: 1fr;
+			grid-template-columns: 100%;
+			grid-template-areas:
+				"sidbar"
+				"items";
+			grid-gap: 0px;
+			gap: 40px;
+			height: 100%;
+			width: 80%;
+			margin: auto;
+		}
+	}
+}

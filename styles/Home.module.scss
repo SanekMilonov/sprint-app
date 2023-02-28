@@ -1,0 +1,179 @@
+.container {
+	height: auto;
+	display: block;
+	padding: 25px 0px;
+}
+
+.content {
+	min-height: 100vh;
+	height: auto;
+	width: 80%;
+	margin: auto;
+	padding: 15px 0px;
+	display: flex;
+}
+
+.bg0 {
+	background-color: #161616;
+	min-height: 800px;
+	background-size: cover;
+}
+
+.bg1 {
+	background: url('../public/bg-1.jpg') center bottom no-repeat;
+	background-size: cover;
+	margin: 0px;
+	width: 100%;
+}
+
+.bg2 {
+	background: url('../public/bg-2.jpg') center bottom no-repeat;
+	background-size: cover;
+	min-height: auto;
+}
+
+.bg3 {
+	background: url('../public/bg-3.jpg') center bottom no-repeat;
+	background-size: cover;
+}
+
+.blockabout {
+	align-items: center;
+	flex-wrap: nowrap;
+	margin: 0px !important;
+	width: 100%;
+
+	.div1 {
+		grid-area: 1 / 1 / 6 / 2;
+
+		img {
+			width: 40%;
+			float: right;
+		}
+	}
+
+	.div2 {
+		grid-area: 1 / 2 / 5 / 3;
+		width: 31%;
+	}
+
+	.div3 {
+		grid-area: 1 / 2 / 2 / 3;
+	}
+
+	.div4 {
+		grid-area: 2 / 2 / 3 / 3;
+	}
+
+	.div5 {
+		grid-area: 3 / 2 / 4 / 3;
+	}
+
+	.div6 {
+		grid-area: 4 / 2 / 5 / 3;
+	}
+}
+
+.pricecontent {
+	height: 100%;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-column-gap: 25px;
+	grid-row-gap: 20px;
+	width: 90%;
+	padding: 0px;
+	grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+	margin: 80px auto;
+}
+
+.prof3block {
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-column-gap: 25px;
+	grid-row-gap: 50px;
+	margin: 30px auto;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+@media (max-width: 1200px) {
+	.carousel-inner {
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		min-height: 450px;
+	}
+
+	.pricecontent {
+		height: 100%;
+		display: block;
+		width: 90%;
+		margin: auto;
+		padding: 0px;
+
+		a {
+			margin-bottom: 15px;
+		}
+	}
+
+	.blockabout {
+		display: block !important;
+		min-height: fit-content;
+
+		.div1 {
+
+			img {
+				width: 50%;
+				float: none;
+				margin: auto;
+				display: block;
+			}
+		}
+
+		.div2 {
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 990px) {
+	.container {
+		padding: 0px;
+	}
+
+	.blockabout {
+		.div1 {
+			text-align: center;
+
+			img {
+				width: 40%;
+				float: none;
+			}
+		}
+
+		.div2 {
+			width: 100%;
+		}
+	}
+
+	.pricecontent {
+		height: 100%;
+		display: block;
+		width: 90%;
+		margin: auto;
+	}
+
+	.prof3block {
+		padding: 50px 0px;
+		margin: 0px;
+	}
+
+}
+
+@media (max-width: 600px) {
+	.grid {
+		width: 100%;
+		flex-direction: column;
+	}
+
+
+}

@@ -1,0 +1,148 @@
+.uslugi_info,
+.uslugi_fqu {
+	display: grid;
+
+	.container {
+		width: 90%;
+		margin: auto;
+	}
+}
+
+.uslugi_page {
+
+	display: grid;
+
+	.uslugi_container {
+		padding: 40px 0px;
+
+		.uslugi_img {
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+		}
+	}
+
+	.card {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		min-width: 0;
+		word-wrap: break-word;
+		background-clip: border-box;
+		border-radius: 0.25rem;
+		margin-bottom: 30px;
+		border: 1px solid #f9fafb;
+		border-radius: 5px;
+		-webkit-transition: all .4s ease;
+		transition: all .4s ease;
+		position: relative;
+		overflow: hidden;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		min-height: 190px;
+		background-color: #fff0 !important;
+
+		&:hover {
+			transform: scale(1.1);
+			border: 1px solid #00cafd;
+			box-shadow: 0px -4px 20px 5px #01b0db;
+		}
+
+		a {
+			flex: 1 1 auto;
+			padding: 1rem 1rem;
+			backdrop-filter: blur(3px);
+
+			p {
+				color: #fff;
+			}
+
+			.card_title {
+				color: #0cf;
+				margin-bottom: 0.5rem;
+			}
+
+			text-decoration: none;
+
+			.card_body {
+				backdrop-filter: blur(3px);
+			}
+		}
+	}
+}
+
+.uslugi_info {
+	.spisok {
+		border: 1px solid #fff;
+		border-radius: 28px;
+		overflow: hidden;
+		margin: 70px 0px;
+
+		.ulznat {
+			backdrop-filter: blur(20px);
+			padding: 3rem;
+			font-size: 2em;
+			margin: auto;
+			list-style: disc;
+		}
+	}
+}
+
+.uslugi_fqu {
+	.spisok_accardion {
+		margin: 70px auto;
+
+		ul {
+			list-style: disc;
+		}
+
+		button[aria-expanded="true"] {
+			color: #ffffff;
+			background-color: #02aed8;
+			box-shadow: 1px 0px 20px 0px rgb(1 184 229);
+		}
+
+		button[aria-expanded="false"] {
+			background: black;
+			color: #fff;
+			box-shadow: none;
+		}
+
+	}
+}
+
+@media screen and (max-width: 1200px) {
+
+	.uslugi_info,
+	.uslugi_fqu {
+		display: block;
+		padding-top: 50px;
+	}
+
+	.uslugi_page {
+
+		display: block;
+		padding-top: 90px;
+		width: 100%;
+		overflow: hidden;
+
+		.uslugi_container {
+
+			.uslugi_img {
+				display: none;
+			}
+		}
+	}
+
+	.uslugi_info {
+		.spisok {
+
+			.ulznat {
+				padding: 1.2rem;
+				font-size: 1em;
+			}
+		}
+	}
+
+}
