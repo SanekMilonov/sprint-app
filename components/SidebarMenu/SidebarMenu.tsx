@@ -13,7 +13,7 @@ export const SidebarMenu = ({ data, title }: SidebarMenuProps): JSX.Element => {
 		<div className={cn(styles.widget_title)}>
 			<h3>{title}</h3>
 			<ul className={cn(styles.widget_list)}>
-				{data.map((post) => (
+				{data.menus.map((post) => (
 					<li key={post.term_id} className={cn(styles.widget_items, name === post.slug ? styles.active : null)}>
 						<Link href={post.url} className={cn(styles.widget_silka)}>{post.name}</Link>
 					</li>
