@@ -1,6 +1,6 @@
 module.exports = {
 	images: {
-		domains: ['f1237392.xsph.ru']
+		domains: ['weblab24.ru']
 	},
 	webpack(config, options) {
 		config.module.rules.push({
